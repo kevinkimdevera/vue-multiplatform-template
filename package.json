@@ -1,0 +1,49 @@
+{
+  "name": "vue-multiplatform-template",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.4.0",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "dev:web": "pnpm --filter @app/web dev",
+    "dev:mobile": "pnpm --filter @app/mobile dev",
+    "dev:android": "pnpm --filter @app/mobile dev:android",
+    "dev:ios": "pnpm --filter @app/mobile dev:ios",
+    "dev:desktop": "pnpm --filter @app/desktop dev",
+    "build": "pnpm -r --filter './apps/*' build",
+    "build:web": "pnpm --filter @app/web build",
+    "build:mobile": "pnpm --filter @app/mobile build",
+    "build:desktop": "pnpm --filter @app/desktop build",
+    "cap:sync": "pnpm --filter @app/mobile cap:sync",
+    "cap:open:android": "pnpm --filter @app/mobile cap:open:android",
+    "cap:open:ios": "pnpm --filter @app/mobile cap:open:ios",
+    "cap:android": "pnpm --filter @app/mobile cap:android",
+    "cap:ios": "pnpm --filter @app/mobile cap:ios",
+    "dist:desktop": "pnpm --filter @app/desktop dist",
+    "dist:win": "pnpm --filter @app/desktop dist:win",
+    "dist:linux": "pnpm --filter @app/desktop dist:linux",
+    "dist:mac": "pnpm --filter @app/desktop dist:mac",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "@vue/eslint-config-prettier": "^10.2.0",
+    "@vue/eslint-config-typescript": "^14.9.0",
+    "@vue/tsconfig": "^0.9.1",
+    "eslint": "^10.13.0",
+    "eslint-plugin-vue": "^10.12.0",
+    "globals": "^17.13.0",
+    "jiti": "^2.6.0",
+    "prettier": "^3.9.0",
+    "typescript": "~6.0.3",
+    "vite": "^8.3.5",
+    "vue-tsc": "^3.3.13"
+  }
+}

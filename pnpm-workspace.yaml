@@ -1,0 +1,9 @@
+packages:
+  - apps/*
+  - packages/*
+
+# Dependencies allowed to run install scripts (pnpm 11+).
+allowBuilds:
+  electron: true # downloads the Electron binary
+  esbuild: true
+  electron-winstaller: false

@@ -1,0 +1,20 @@
+{
+  "name": "@app/web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "vue-tsc --noEmit"
+  },
+  "dependencies": {
+    "@app/platform": "workspace:*",
+    "@app/ui": "workspace:*",
+    "vue": "^3.5.44"
+  },
+  "devDependencies": {
+    "vite-plugin-pwa": "^2.0.0"
+  }
+}

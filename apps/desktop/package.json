@@ -1,0 +1,31 @@
+{
+  "name": "@app/desktop",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Vue Multiplatform desktop shell",
+  "main": "./out/main/index.js",
+  "desktopName": "vue-multiplatform.desktop",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "pnpm typecheck && electron-vite build",
+    "preview": "electron-vite preview",
+    "typecheck": "tsc --noEmit -p tsconfig.node.json && vue-tsc --noEmit -p tsconfig.web.json",
+    "dist": "pnpm build && electron-builder",
+    "dist:win": "pnpm build && electron-builder --win",
+    "dist:linux": "pnpm build && electron-builder --linux",
+    "dist:mac": "pnpm build && electron-builder --mac"
+  },
+  "devDependencies": {
+    "@app/platform": "workspace:*",
+    "@app/ui": "workspace:*",
+    "electron": "^45.1.0",
+    "electron-builder": "^26.18.0",
+    "electron-vite": "^6.0.0",
+    "vue": "^3.5.44"
+  },
+  "homepage": "https://example.com",
+  "author": {
+    "name": "Your Name",
+    "email": "you@example.com"
+  }
+}

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Vue Multiplatform</string>
+    <string name="title_activity_main">Vue Multiplatform</string>
+    <string name="package_name">com.example.vuemultiplatform</string>
+    <string name="custom_url_scheme">com.example.vuemultiplatform</string>
+</resources>
